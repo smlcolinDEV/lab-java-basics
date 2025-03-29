@@ -2,7 +2,7 @@ public class Company {
     public static void main(String[] args) {
         Employee[] team = new Employee[10];
 
-        team[0]=new Intern("Salvatore",18,30000);
+        team[0]=new Intern("Salvatore",18,20000);
         team[1]=new Intern("Céline",22,3400);
         team[2]=new Intern("Alex",24,4200);
         team[3]=new Intern("Elodie",19,6500);
