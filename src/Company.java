@@ -14,7 +14,7 @@ public class Company {
         team[9]=new Intern("Sébastien",26,10000);
         for(Employee member:team){
 
-            System.out.println(member.toString());;
+            System.out.println(member.toString());
         }
 
     }

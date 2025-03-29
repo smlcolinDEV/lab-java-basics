@@ -9,13 +9,13 @@ public class Basics {
         int diff = 0;
         int smallest = Array[0];
         int largest = Array[0];
-        for (int i = 0; i < Array.length; i++) {
+        for (int j : Array) {
             if (Array.length > 0) {
-                if (smallest > Array[i]) {
-                    smallest = Array[i];
+                if (smallest > j) {
+                    smallest = j;
                 }
-                if (largest < Array[i]) {
-                    largest = Array[i];
+                if (largest < j) {
+                    largest = j;
                 }
 
             }
