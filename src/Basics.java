@@ -1,6 +1,6 @@
 public class Basics {
     public static void main(String[] args) {
-        // Define a list of integers.
+        // Declare and initialize a list of integers.
         int[] list = {12, 90, 56, 1, 2, 78};
 
         // Call methods to calculate the difference between the largest and smallest element,
@@ -11,14 +11,14 @@ public class Basics {
 
     /**
      * Method to calculate the difference between the largest and smallest element in an array.
-     * @param list The list of integers.
+     * @param list The array of integers.
      */
     public static void diffLargestAndSmallest(int[] list) {
         // Initialize variables to store the smallest and largest elements.
         int smallest = list[0];
         int largest = list[0];
 
-        // Check if the list is not empty.
+        // Check that the list is not empty.
         if (list.length > 0) {
             // Iterate through each element in the list.
             for (int j : list) {
@@ -37,16 +37,16 @@ public class Basics {
         int diff = largest - smallest;
 
         // Print the result.
-        System.out.println("The difference between the smallest (" + smallest + ") and largest (" + largest + ") integer of this list is: " + diff);
+        System.out.println("The difference between the smallest (" + smallest + ") and largest (" + largest + ") integer in this list is: " + diff);
     }
 
     /**
      * Method to find the two smallest elements in an array.
-     * @param array The array of integers.
+     * @param list The array of integers.
      */
-    public static void firstAndSecondSmallest(int[] array) {
-        // Check that the array contains at least two elements.
-        if (array.length < 2) {
+    public static void firstAndSecondSmallest(int[] list) {
+        // Check that the list contains at least two elements.
+        if (list.length < 2) {
             System.out.println("Array must have at least two elements.");
             return;
         }
@@ -56,7 +56,7 @@ public class Basics {
         int secondSmallest = Integer.MAX_VALUE;
 
         // Iterate through each element in the array.
-        for (int i : array) {
+        for (int i : list) {
             // Update the first smallest element if the current element is smaller.
             if (firstSmallest > i) {
                 secondSmallest = firstSmallest;
