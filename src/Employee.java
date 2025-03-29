@@ -35,8 +35,13 @@ public class Employee {
     public void updateSalary(int newSalary){
         this.salary = newSalary;
     }
+
     @Override
     public String toString() {
-        return "Employee Name: " + name +"Age: "+ age + ", Salary: " + salary;
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", salary=" + salary +
+                '}';
     }
 }
