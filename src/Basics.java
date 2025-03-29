@@ -1,24 +1,26 @@
 public class Basics {
     public static void main(String[] args) {
+        // Define an array of integers.
+        int[] array = {12, 90, 56, 1, 2, 78};
+
         // Call methods to calculate the difference between the largest and smallest element,
         // and to find the two smallest elements in the array.
-        diffLargestAndSmallest();
-        firstAndSecondSmallest();
+        diffLargestAndSmallest(array);
+        firstAndSecondSmallest(array);
     }
 
     /**
      * Method to calculate the difference between the largest and smallest element in an array.
+     * @param array The array of integers.
      */
-    public static void diffLargestAndSmallest() {
-        // Initialize the array with values.
-        int[] array = {12, 34, 56, 69, 2, 78};
-
+    public static void diffLargestAndSmallest(int[] array) {
         // Initialize variables to store the smallest and largest elements.
         int smallest = array[0];
         int largest = array[0];
 
-        // Iterate through each element in the array.
-        if(array.length>0){
+        // Check if the array is not empty.
+        if (array.length > 0) {
+            // Iterate through each element in the array.
             for (int j : array) {
                 // Update the smallest element if the current element is smaller.
                 if (smallest > j) {
@@ -29,9 +31,7 @@ public class Basics {
                     largest = j;
                 }
             }
-
         }
-
 
         // Calculate the difference between the largest and smallest elements.
         int diff = largest - smallest;
@@ -42,11 +42,9 @@ public class Basics {
 
     /**
      * Method to find the two smallest elements in an array.
+     * @param array The array of integers.
      */
-    public static void firstAndSecondSmallest() {
-        // Initialize the array with values.
-        int[] array = {12, 34, 56, 69, 2, 78, 8};
-
+    public static void firstAndSecondSmallest(int[] array) {
         // Check that the array contains at least two elements.
         if (array.length < 2) {
             System.out.println("Array must have at least two elements.");
