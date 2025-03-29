@@ -1,27 +1,27 @@
 public class Basics {
     public static void main(String[] args) {
-        // Define an array of integers.
-        int[] array = {12, 90, 56, 1, 2, 78};
+        // Define a list of integers.
+        int[] list = {12, 90, 56, 1, 2, 78};
 
         // Call methods to calculate the difference between the largest and smallest element,
-        // and to find the two smallest elements in the array.
-        diffLargestAndSmallest(array);
-        firstAndSecondSmallest(array);
+        // and to find the two smallest elements in the list.
+        diffLargestAndSmallest(list);
+        firstAndSecondSmallest(list);
     }
 
     /**
      * Method to calculate the difference between the largest and smallest element in an array.
-     * @param array The array of integers.
+     * @param list The list of integers.
      */
-    public static void diffLargestAndSmallest(int[] array) {
+    public static void diffLargestAndSmallest(int[] list) {
         // Initialize variables to store the smallest and largest elements.
-        int smallest = array[0];
-        int largest = array[0];
+        int smallest = list[0];
+        int largest = list[0];
 
-        // Check if the array is not empty.
-        if (array.length > 0) {
-            // Iterate through each element in the array.
-            for (int j : array) {
+        // Check if the list is not empty.
+        if (list.length > 0) {
+            // Iterate through each element in the list.
+            for (int j : list) {
                 // Update the smallest element if the current element is smaller.
                 if (smallest > j) {
                     smallest = j;
@@ -37,7 +37,7 @@ public class Basics {
         int diff = largest - smallest;
 
         // Print the result.
-        System.out.println("The difference between the smallest (" + smallest + ") and largest (" + largest + ") integer of this array is: " + diff);
+        System.out.println("The difference between the smallest (" + smallest + ") and largest (" + largest + ") integer of this list is: " + diff);
     }
 
     /**
@@ -62,7 +62,7 @@ public class Basics {
                 secondSmallest = firstSmallest;
                 firstSmallest = i;
             }
-            // Update the second smallest element if the current element is smaller than the second smallest but larger than the first smallest.
+            // Update the second-smallest element if the current element is smaller than the second smallest but larger than the first smallest.
             else if (secondSmallest > i) {
                 secondSmallest = i;
             }
