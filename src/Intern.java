@@ -11,7 +11,7 @@ public class Intern extends Employee{
     @Override
     public void updateSalary(int newSalary) {
         if(newSalary<20000){
-            super.updateSalary(newSalary);
+            super.setSalary(newSalary);
         }
         else{
             throw new IllegalArgumentException("You can not set a salary that exceed "+ maxSalary + " to "+super.getName());
